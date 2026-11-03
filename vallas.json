@@ -1,0 +1,42 @@
+{
+ "v_n1":{
+         "nombre": "VALLAS DE SEGURIDAD NIVEL 1",
+         "seguridad": "nivel 1",
+         "peligro": "bajo",
+         "rareza": "comun",
+         "costo": "Dinero=",
+         "daño": "1 corazones × segundo",
+         "imagen": "imagenes/vallas/v_n1.png",
+         "info": "esta valla es especial para dinosaurios pequeños y medianos, con una lijera descarga electrica."
+ },
+ "v_n2":{
+         "nombre": "VALLAS DE SEGURIDAD NIVEL 2",
+         "seguridad": "nivel 2",
+         "peligro": "medio",
+         "rareza": "comun",
+         "costo": "Dinero=",
+         "daño": "2 corazones × segundo",
+         "imagen": "imagenes/vallas/v_n2.png",
+         "info": "esta valla es especial para dinosaurios medianos y medianos grandes, con una descarga electrica ligeramente mas potente que la valla nivel 1"
+ },
+ "v_n3": {
+         "nombre": "VALLAS DE SEGURIDAD NIVEL 3",
+         "seguridad": "nivel 3",
+         "peligro": "alto",
+         "rareza": "poco comun",
+         "costo": "Dinero=",
+         "daño": "3 corazones × segundo",
+         "imagen": "imagenes/vallas/v_n3.png",
+         "info": "esta valla es especial para dinosaurios medianos grandes y dinosaurios grandes, con un voltaje alto"
+ },
+ "v_n4": {
+         "nombre": "VALLAS DE SEGURIDAD NIVEL 4",
+         "seguridad": "nivel 4",
+         "peligro": "alto",
+         "rareza": "legendario",
+         "costo": "Dinero=",
+         "daño": "4 corazones × segundo",
+         "imagen": "imagenes/vallas/v_n4.png",
+         "info": "estas vallas son especiales para dinosaurios grandes y pesados, con una alto nivel de peligro en su voltaje"
+ }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vallas Jurásicas 3.0 - Base de Datos</title>
+    <link rel="stylesheet" href="jf.css"> 
+    <!-- Carga del visor 3D en el head -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body class="paradise-theme">
+
+    <canvas id="fx-canvas"></canvas>
+    <header>
+        <nav class="navbar">
+             <div class="logo"><h1>JURASSIC FENCES</h1></div>
+             <div class="menu-toggle" id="menu-toggle">
+                 <div class="bar"></div>
+                 <div class="bar"></div>
+                 <div class="bar"></div>
+             </div>
+             <ul class="nav-links" id="nav-links">
+                 <li><a href="index.html">Inicio</a></li>
+                 <li><a href="jurassic-fences.html">Vallas Jurásicas 3.0</a></li>
+                 <li><a href="trailer/trailer.html">🎬 Tráiler Musical</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <main class="viewport-stage">
+
+        <!-- PASO 1: INTRODUCCIÓN -->
+        <section id="step-1" class="step-view view-active">
+            <div class="addon-cover-box">
+                <img src="imagenes/portada-jurassic.png" alt="Vallas Jurásicas Portada" class="main-cover-img">
+                <h2 class="addon-title">CIELO, MAR Y TIERRA</h2>
+                <p class="addon-subtitle">Base de Datos de Especies Avanzada</p>
+                
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+                    <button class="next-step-btn" id="btn-conectar">
+                        <span>CONECTAR AL ESCÁNER</span> <span class="arrow">&gt;</span>
+                    </button>
+                    <a href="trailer/trailer.html" class="next-step-btn" style="text-decoration: none; background: rgba(0, 255, 204, 0.15); border-color: #00ffcc;">
+                        <span>🎬 VER TRÁILER</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PASO 2: MENÚ ORBITAL -->
+        <section id="step-2" class="step-view view-future">
+                <div id="pyramid-orbit-system" class="orbit-rotation-wrapper">
+                    <button class="hub-btn hub-cielo" data-sector="CIELO">
+                        <img src="imagenes/cielo.png" alt="Cielo" class="hub-icon">
+                        <span>CIELO</span>
+                    </button>
+                    <button class="hub-btn hub-mar" data-sector="MAR">
+                        <img src="imagenes/mar.png" alt="Mar" class="hub-icon">
+                        <span>MAR</span>
+                    </button>
+                    <button class="hub-btn hub-tierra" data-sector="TIERRA">
+                        <img src="imagenes/tierra.png" alt="Tierra" class="hub-icon">
+                        <span>TIERRA</span>
+                    </button>
+                    <button class="hub-btn hub-vallas" data-sector="VALLAS">
+                        <img src="imagenes/vallas.png" alt="Vallas" class="hub-icon">
+                        <span>VALLAS</span>
+                    </button>
+                </div>
+        </section>
+
+        <!-- PASO 3: PANEL DE ESPECIES -->
+        <section id="step-3" class="step-view view-future">
+            <div class="dashboard-controls">
+                <button class="control-nav-btn" id="btn-volver-sector">← Cambiar de Sector</button>
+                <h2 id="current-sector-title" class="sector-indicator">SECTOR</h2>
+                <button class="control-nav-btn" id="btn-sistemas-vallas">Sistemas de Vallas →</button>
+            </div>
+
+            <div class="explorer-workspace" id="explorer-layout">
+                
+                <div class="species-sidebar">
+                    <h3>Registro Genético</h3>
+                    
+                    <div class="search-box-container">
+                        <input type="text" id="dino-search-input" placeholder="🔍 Filtrar espécimen..." class="cyber-search-input" autocomplete="off">
+                    </div>
+
+                    <div class="dynamic-list-container" id="dino-list-container">
+                        <!-- Botones base inyectados por JS -->
+                    </div>
+                </div>
+
+                <div class="analysis-zone">
+                    <div class="map-view-container" id="map-container">
+                        <img src="imagenes/mapamundi.png" alt="Mapamundi" class="map-image">
+                        <div id="map-marker" class="map-marker"></div>
+                    </div>
+                
+                    <div class="variants-selector-list" id="variants-list-container">
+                        <p class="placeholder-text">Seleccione un espécimen base...</p>
+                    </div>
+                
+                    <div class="dino-data-sheet" id="active-data-sheet">
+                        <div class="sheet-notice">Esperando decodificación de ADN...</div>
+                    </div>
+
+                    <!-- CONTENEDOR 3D PARA EL MODELO -->
+                    <div id="dino-3d-viewer-container" style="width: 100%; height: 320px; margin-top: 15px; display: none;">
+                        <model-viewer 
+                            id="dino-model-viewer"
+                            src="" 
+                            alt="Modelo 3D interactivo" 
+                            auto-rotate 
+                            camera-controls 
+                            shadow-intensity="1"
+                            style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                        </model-viewer>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PASO 4: SISTEMAS DE VALLAS -->
+        <section id="step-4" class="step-view view-future">
+            <div class="dashboard-controls">
+                <button class="control-nav-btn" id="btn-volver-dinos">← Regresar a Especies</button>
+                <h2 class="sector-indicator">GESTIÓN DE VALLAS</h2>
+            </div>
+            <div class="explorer-workspace" id="vallas-workspace">
+                <div class="species-sidebar">
+                    <h3>Catálogo de Vallas</h3>
+                    <div class="dynamic-list-container" id="vallas-list-container"></div>
+                </div>
+                <div class="analysis-zone">
+                    <div class="dino-data-sheet" id="active-valla-sheet">
+                        <div class="sheet-notice">Seleccione un sistema de contención para ver sus especificaciones.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tutorial-container" style="margin-top: 20px;"></div>
+        </section>
+        
+    </main>
+
+    <script src="jf.js" defer></script>
+</body>
+</html>

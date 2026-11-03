@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+        <head>
+                <meta charset="UTF-8" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>AP ORG - Plataforma Oficial</title>
+                <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
+                <!-- Canvas para posibles efectos visuales de fondo -->
+                <canvas id="fx-canvas"></canvas>
+
+                <!-- ENCABEZADO Y NAVEGACIÓN -->
+                <header>
+                        <nav class="navbar">
+                                <div class="logo">
+                                        <!-- Puedes cambiar la ruta de tu logo aquí -->
+                                        <h2
+                                                style="
+                                                        color: white;
+                                                        font-weight: 800;
+                                                        letter-spacing: 2px;
+                                                "
+                                        >
+                                                AP
+                                                <span
+                                                        style="
+                                                                color: var(
+                                                                        --accent-color
+                                                                );
+                                                        "
+                                                        >ORG</span
+                                                >
+                                        </h2>
+                                </div>
+
+                                <div class="menu-toggle">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                </div>
+
+                                <ul class="nav-links">
+                                        <li><a href="#inicio">Inicio</a></li>
+                                        <li>
+                                                <a href="#proyectos"
+                                                        >Proyectos</a
+                                                >
+                                        </li>
+                                        <li><a href="#social">Comunidad</a></li>
+                                </ul>
+                        </nav>
+                </header>
+
+                <!-- CONTENIDO PRINCIPAL -->
+                <main>
+                        <!-- SECCIÓN INICIO (HERO) -->
+                        <section id="inicio" class="hero">
+                                <div class="hero-content">
+                                        <h1>
+                                                Bienvenidos a
+                                                <strong>AP ORG</strong>
+                                        </h1>
+                                        <p>
+                                                Plataforma oficial de desarrollo
+                                                y organización.<br />Enfocada en
+                                                el diseño web, Add-ons, música y
+                                                arte.
+                                        </p>
+
+                                        <!-- Cajas de Presentación de Datos -->
+                                        <div class="hero-stats-grid">
+                                                <!-- Descargas Totales -->
+                                                <div
+                                                        class="stat-card"
+                                                        id="card-downloads"
+                                                >
+                                                        <span
+                                                                class="stat-number"
+                                                                id="stat-downloads"
+                                                                >0</span
+                                                        >
+                                                        <span class="stat-label"
+                                                                >Descargas de
+                                                                Vallas
+                                                                Jurásicas</span
+                                                        >
+                                                </div>
+
+                                                <!-- Miembros Discord -->
+                                                <div
+                                                        class="stat-card"
+                                                        id="card-discord"
+                                                >
+                                                        <span
+                                                                class="stat-number"
+                                                                id="stat-discord"
+                                                                >0</span
+                                                        >
+                                                        <span class="stat-label"
+                                                                >Miembros en
+                                                                Discord</span
+                                                        >
+                                                </div>
+
+                                                <!-- Patreons Activos -->
+                                                <div
+                                                        class="stat-card"
+                                                        id="card-patreon"
+                                                >
+                                                        <span
+                                                                class="stat-number"
+                                                                id="stat-patreon"
+                                                                >0</span
+                                                        >
+                                                        <span class="stat-label"
+                                                                >Patrocinadores</span
+                                                        >
+                                                </div>
+
+                                                <!-- Colaboradores -->
+                                                <div
+                                                        class="stat-card"
+                                                        id="card-collabs"
+                                                >
+                                                        <span
+                                                                class="stat-number"
+                                                                id="stat-collabs"
+                                                                >0</span
+                                                        >
+                                                        <span class="stat-label"
+                                                                >Colaboradores</span
+                                                        >
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+
+                        <!-- SECCIÓN DE PROYECTOS -->
+                        <section id="proyectos" class="container">
+                                <h2 class="section-title">
+                                        Nuestros Proyectos
+                                </h2>
+                                <div class="projects-grid">
+                                        <!-- Tarjeta de Proyecto 1 -->
+                                        <div class="project-card">
+                                                <div>
+                                                        <h3>
+                                                                Vallas Jurásicas
+                                                        </h3>
+                                                        <p>
+                                                                Desarrollo
+                                                                avanzado de
+                                                                Add-on para
+                                                                Minecraft
+                                                                Bedrock con
+                                                                modelado y
+                                                                scripting
+                                                                personalizado.
+                                                        </p>
+                                                </div>
+                                                <div class="tech-tags">
+                                                        <span class="tag"
+                                                                >Add-on</span
+                                                        >
+                                                        <span class="tag"
+                                                                >Scripting
+                                                                API</span
+                                                        >
+                                                        <span class="tag"
+                                                                >Modelaje</span
+                                                        >
+                                                </div>
+                                                <a
+                                                        href="jurassic-fences.html"
+                                                        class="btn-detail"
+                                                        >abrir pagina de
+                                                        jurassic fences
+                                                        &rarr;</a
+                                                >
+                                        </div>
+                                        <!-- Tarjeta de Proyecto 2 -->
+                                        <div class="project-card">
+                                                <div>
+                                                        <h3>
+                                                                Music Player App
+                                                        </h3>
+                                                        <p>
+                                                                Interfaz de
+                                                                reproducción de
+                                                                audio
+                                                                personalizada
+                                                                construida con
+                                                                Node.js y diseño
+                                                                web moderno.
+                                                        </p>
+                                                </div>
+                                                <div class="tech-tags">
+                                                        <span class="tag"
+                                                                >Node.js</span
+                                                        >
+                                                        <span class="tag"
+                                                                >HTML/CSS/JS</span
+                                                        >
+                                                        <span class="tag"
+                                                                >UI/UX</span
+                                                        >
+                                                </div>
+                                                <a
+                                                        href="music_player/music-player.html"
+                                                        class="btn-detail"
+                                                        >Abrir Reproductor
+                                                        &rarr;</a
+                                                >
+                                        </div>
+                                </div>
+                        </section>
+
+                        <!-- SECCIÓN SOCIAL -->
+                        <section id="social" class="container">
+                                <h2 class="section-title">Comunidad y Redes</h2>
+                                <div class="social-grid">
+                                        <!-- Discord -->
+                                        <a
+                                                href="https://discord.gg/2ngucqdjB3"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="social-card"
+                                        >
+                                                <div class="social-info">
+                                                        <h3>DISCORD</h3>
+                                                        <p>
+                                                                Únete a nuestra
+                                                                comunidad
+                                                                oficial para
+                                                                chatear, recibir
+                                                                soporte y
+                                                                enterarte de las
+                                                                novedades.
+                                                        </p>
+                                                </div>
+                                                <span class="btn-social"
+                                                        >Unirse al Servidor
+                                                        &rarr;</span
+                                                >
+                                        </a>
+
+                                        <!-- Patreon -->
+                                        <a
+                                                href="https://www.patreon.com/JB_anomalias?utm_campaign=creatorshare_creator"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="social-card"
+                                        >
+                                                <div class="social-info">
+                                                        <h3>PATREON</h3>
+                                                        <p>
+                                                                Apoya nuestros
+                                                                proyectos
+                                                                directamente y
+                                                                obtén
+                                                                recompensas y
+                                                                acceso
+                                                                exclusivo.
+                                                        </p>
+                                                </div>
+                                                <span class="btn-social"
+                                                        >Apoyar Proyecto
+                                                        &rarr;</span
+                                                >
+                                        </a>
+
+                                        <!-- YouTube Oficial -->
+                                        <a
+                                                href="https://youtube.com/@ap_anomalias?si=ZrHr6zhJSmTOt0Ue"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="social-card"
+                                        >
+                                                <div class="social-info">
+                                                        <h3>YOUTUBE OFICIAL</h3>
+                                                        <p>
+                                                                Canal oficial de
+                                                                AP ORG con
+                                                                avances,
+                                                                trailers y
+                                                                lanzamientos de
+                                                                nuestros addons.
+                                                        </p>
+                                                </div>
+                                                <span class="btn-social"
+                                                        >Ver Canal &rarr;</span
+                                                >
+                                        </a>
+
+                                        <!-- Instagram -->
+                                        <a
+                                                href="https://www.instagram.com/jaredchimalbravo?igsh=MW81ZTU3MGYycTNoeg=="
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="social-card"
+                                        >
+                                                <div class="social-info">
+                                                        <h3>INSTAGRAM</h3>
+                                                        <p>
+                                                                Sigue nuestras
+                                                                publicaciones,
+                                                                avances visuales
+                                                                e información
+                                                                sobre el
+                                                                desarrollo.
+                                                        </p>
+                                                </div>
+                                                <span class="btn-social"
+                                                        >Seguir en Instagram
+                                                        &rarr;</span
+                                                >
+                                        </a>
+                                </div>
+                        </section>
+
+                        <!-- SECCIÓN EXTRAS -->
+                        <section id="extras" class="container">
+                                <h2 class="section-title">EXTRAS</h2>
+                                <div class="extra-grid">
+                                        <article class="extra-card">
+                                                <div class="extra-info">
+                                                        <h3>prueba</h3>
+                                                        <p>prueba</p>
+                                                </div>
+                                        </article>
+                                </div>
+                        </section>
+                </main>
+
+                <!-- MODAL DE DETALLES DE ESTADÍSTICAS -->
+                <div id="stat-modal" class="modal-overlay">
+                        <div class="modal-content">
+                                <span class="close-modal" id="close-modal"
+                                        >&times;</span
+                                >
+                                <h2 id="modal-title" class="modal-title">
+                                        Título
+                                </h2>
+                                <div id="modal-body" class="modal-body">
+                                        <!-- El JavaScript inyectará las listas aquí -->
+                                </div>
+                        </div>
+                </div>
+                <!-- DERECHOS RESERVADOS DE LA AP ORG -->
+                <footer id="footer" class="boxed">
+                        <a
+                                href="aporganizafos@gmail.com"
+                                target="blank"
+                                rel="noopener noreferrer"
+                                class="footer-lift"
+                        >
+                                <div class="footer-info">
+                                        <h3>&copy;2026 AP ORGANIZACION</h3>
+                                        <p>&copy;LIDEL CARMESÍ</p>
+                                </div>
+                        </a>
+                </footer>
+
+                <!-- SCRIPT PRINCIPAL -->
+                <script src="script.js"></script>
+        </body>
+</html>

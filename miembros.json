@@ -1,0 +1,34 @@
+{
+  "miembros_de_patron": {
+    "comun": ["Giancarlos rodriguez", "Austin Rodriguez", "Nick Tyler", "Wilmer Santana Mejia"],
+    "raro": [],
+    "muy_raro": [],
+    "legendario": [],
+    "epico": []
+  },
+  "cantidad_de_miembros_de_discord": {
+    "miembros": 778,
+    "moderador": 12,
+    "vips": 22,
+    "creador_de_contenido": 26,
+    "verificados": 18,
+    "creadores_de_modelos": 11,
+    "youtuber": 19,
+    "beta_tester": 19,
+    "administradores": 6
+  },
+  "miembros_de_jb_anomalias": {
+    "apoyo": [],
+    "colaboradores": ["SmithyMC", "Fershy Corporation", "AP ORG", "Augustuberz"],
+    "platino": [],
+    "oro": [],
+    "diamante": []
+  },
+  "cantidad_de_descargas_jurassic_fences": {
+    "1.0": 824,
+    "1.5": 1018,
+    "JF 1.8 SPINO CRIMSON": 870,
+    "JF 2.0 GRANT TYRANNY": 2724,
+    "JF 3.0 SKY SEA AND LAND": 1033
+  }
+}

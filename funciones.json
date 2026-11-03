@@ -1,0 +1,37 @@
+{
+  "tutorial_construccion_vallas": {
+    "titulo": "Dinámica y Construcción de Vallas",
+    "descripcion": "Guía paso a paso para el establecimiento de perímetros y recintos seguros en Vallas Jurásicas.",
+    "fases": [
+      {
+        "fase": 1,
+        "nombre": "Traza la base",
+        "timestamp": "00:03:23",
+        "descripcion": "Delimita el área del mapa utilizando los bloques de cimiento tecnológico 'base para valla'. Asegúrate de cerrar por completo el perímetro usando 'barrera de valla' y conecta las esquinas utilizando las 'barreras esquineales'."
+      },
+      {
+        "fase": 2,
+        "nombre": "Tendida de contención",
+        "timestamp": "00:03:50",
+        "descripcion": "Añade los postes de soporte y las vallas electrificadas a lo largo de toda la línea de cimentación utilizando el ítem 'control de vallas' para activar la protección activa."
+      },
+      {
+        "fase": 3,
+        "nombre": "Acceso automatizado",
+        "timestamp": "00:06:01",
+        "descripcion": "Coloca una compuerta de seguridad en puntos estratégicos para conectar caminos o rutas de transporte. Los vehículos de patrullaje pueden cruzar de forma fluida gracias a sus sensores de proximidad preinstalados."
+      }
+    ],
+    "requisitos_recinto_nivel_1": {
+      "timestamp": "00:06:27",
+      "descripcion": "Requisitos mínimos indispensables para albergar especies pequeñas o de bajo riesgo de forma segura:",
+      "materiales_y_estructura": [
+        "Muros perimetrales estándar o vallas reforzadas con una altura mínima recomendada de 5 bloques.",
+        "Redstone y lingotes de hierro en inventario.",
+        "Saldo aprobado en tu cuenta bancaria (en modo supervivencia, gestionado mediante la caja registradora con billetes/monedas; omitido en modo creativo).",
+        "Compuerta de nivel uno para el ingreso de personal o vehículos de mantenimiento.",
+        "Zona de observación despejada y bioma interior adaptado (agua y vegetación)."
+      ]
+    }
+  }
+}
