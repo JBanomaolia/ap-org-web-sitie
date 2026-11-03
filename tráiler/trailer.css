@@ -1,0 +1,190 @@
+:root {
+    --accent-color: #00ffcc;
+    --warning-color: #ffaa00;
+    --danger-color: #ff3333;
+    --bg-dark: #070a0f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    color: #fff;
+}
+
+.trailer-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Manejo de Pantallas */
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    z-index: 1;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/* Branding y Títulos */
+.brand-box, .end-menu-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 15;
+}
+
+.main-logo {
+    max-width: 320px;
+    width: 80%;
+    filter: drop-shadow(0 0 20px rgba(0, 255, 204, 0.4));
+}
+
+.trailer-header-title {
+    font-size: 32px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px var(--accent-color);
+}
+
+.tagline {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--accent-color);
+}
+
+.end-title {
+    font-size: 28px;
+    color: var(--warning-color);
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 170, 0, 0.5);
+}
+
+.end-subtitle {
+    font-size: 13px;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+/* Botones Estilo Cyberpunk/Tactical */
+.cyber-btn {
+    background: rgba(0, 255, 204, 0.1);
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.cyber-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 25px var(--accent-color);
+    transform: scale(1.03);
+}
+
+.btn-secondary {
+    border-color: var(--warning-color);
+    color: var(--warning-color);
+    background: rgba(255, 170, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background: var(--warning-color);
+    color: #000;
+    box-shadow: 0 0 25px var(--warning-color);
+}
+
+.end-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Slideshow e Imágenes de Fondo */
+.slideshow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 8s ease;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+.overlay-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
+}
+
+/* Ficha / Visualizador de Letras */
+.lyrics-overlay {
+    position: relative;
+    z-index: 20;
+    padding: 22px 35px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+    border-right: 1px solid rgba(0, 255, 204, 0.3);
+    max-width: 85%;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+}
+
+.lyric-line {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(0, 255, 204, 0.6);
+    transition: opacity 0.3s ease;
+    line-height: 1.4;
+}

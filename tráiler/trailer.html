@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic Fences - Tráiler Oficial</title>
+    <link rel="stylesheet" href="trailer.css">
+</head>
+<body class="tactical-bg">
+
+    <!-- Elemento de Audio -->
+    <audio id="trailer-audio" src="sounds/musica_trailer.mp3" preload="auto" controls></audio>
+
+    <main class="trailer-container">
+
+        <!-- PANTALLA 1: INICIO Y PORTADA -->
+        <section id="screen-start" class="screen active">
+            <div class="brand-box">
+                <img src="../imagenes/portada-jurassic.png" alt="Jurassic Fences Logo" class="main-logo" onerror="this.style.display='none'">
+                <h1 class="trailer-header-title">JURASSIC FENCES 3.0</h1>
+                <p class="tagline">SISTEMA DE CONTENCIÓN JURÁSICA</p>
+                <button id="btn-start-trailer" class="cyber-btn glow">
+                    <span>▶ INICIAR TRÁILER</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 2: REPRODUCTOR DEL TRÁILER Y LETRA -->
+        <section id="screen-trailer" class="screen">
+            <!-- Galería de 4 Imágenes de Fondo -->
+            <div id="slideshow-bg" class="slideshow-container">
+                <div class="slide active" style="background-image: url('imagenes/trailer_bg1.jpg');"></div>
+                <div class="slide" style="background-image: url('imagenes/trailer_bg2.jpg');"></div>
+                <div class="slide" style="background-image: url('imagenes/trailer_bg3.jpg');"></div>
+                <div class="slide" style="background-image: url('imagenes/trailer_bg4.jpg');"></div>
+            </div>
+
+            <div class="overlay-gradient"></div>
+
+            <!-- Visualizador de Letras Sincronizadas -->
+            <div class="lyrics-overlay">
+                <p id="lyric-text" class="lyric-line">...</p>
+            </div>
+        </section>
+
+        <!-- PANTALLA 3: MENÚ FINAL -->
+        <section id="screen-end" class="screen">
+            <div class="end-menu-box">
+                <h2 class="end-title">TRANSMISIÓN FINALIZADA</h2>
+                <p class="end-subtitle">SISTEMAS AP ORG EN LÍNEA</p>
+                
+                <div class="end-buttons">
+                    <button id="btn-replay" class="cyber-btn">
+                        <span>🔄 VOLVER A VER</span>
+                    </button>
+                    <a href="../jurassic-fences.html" class="cyber-btn btn-secondary">
+                        <span>🦖 VOLVER A JURASSIC FENCES</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="trailer.js"></script>
+</body>
+</html>
