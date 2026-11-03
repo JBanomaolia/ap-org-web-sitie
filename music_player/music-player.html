@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - AP ORG</title>
+    <link rel="stylesheet" href="music-player.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>AP <span>ORG</span></h2>
+            </div>
+            <a href="index.html" class="back-home">&larr; Inicio</a>
+        </nav>
+    </header>
+
+    <!-- VISTA 1: LISTA DE REPRODUCCIÓN -->
+    <main class="main-content" id="playlist-screen">
+        <div class="playlist-container">
+            <div class="playlist-header">
+                <h3>Mi Biblioteca</h3>
+                <!-- Botón de selección múltiple (acumulativo) -->
+                <button class="load-library-btn" id="load-files-btn">➕ Añadir Canciones</button>
+                <input type="file" id="file-input" accept="audio/*" multiple style="display:none;">
+            </div>
+            <ul class="playlist-items" id="playlist-items">
+                <li class="empty-state">La lista está vacía. Añade canciones para empezar.</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- VISTA 2: VISUALIZADOR PRINCIPAL -->
+    <div class="full-player-overlay" id="full-player">
+        <button class="close-player" id="close-player-btn">▼ Minimizar</button>
+        
+        <div class="player-content">
+            <!-- Contenedor del visualizador rítmico -->
+            <div class="album-art-big" id="visualizer-container">
+                <canvas id="audio-visualizer" width="250" height="250"></canvas>
+            </div>
+            
+            <div class="track-info-big">
+                <h3 id="track-title-big">Selecciona una pista</h3>
+                <p id="track-artist-big">AP ORG</p>
+            </div>
+
+            <div class="progress-section">
+                <div class="time-stamps">
+                    <span id="current-time-big">0:00</span>
+                    <span id="total-duration-big">0:00</span>
+                </div>
+                <div class="progress-container" id="progress-container-big">
+                    <div class="progress-bar" id="progress-bar-big"></div>
+                </div>
+            </div>
+
+            <div class="controls-big">
+                <button class="ctrl-btn-big secondary" id="shuffle-btn" title="Aleatorio">🔀</button>
+                <button class="ctrl-btn-big" id="prev-btn-big">⏮</button>
+                <button class="ctrl-btn-big play-big" id="play-btn-big">▶</button>
+                <button class="ctrl-btn-big" id="next-btn-big">⏭</button>
+                <button class="ctrl-btn-big secondary" id="repeat-btn" title="Repetir">🔁</button>
+            </div>
+
+            <div class="volume-section">
+                <span>🔊</span>
+                <input type="range" id="volume-slider-big" min="0" max="1" step="0.01" value="0.8">
+            </div>
+        </div>
+    </div>
+
+    <!-- VISTA 3: ICONO FLOTANTE (DENTRO DEL NAVEGADOR) -->
+    <div class="floating-player" id="floating-player">
+        <div class="floating-art" id="open-full-btn">🎵</div>
+        <div class="floating-controls">
+            <button class="float-btn" id="prev-btn-float">⏮</button>
+            <button class="float-btn play-float" id="play-btn-float">▶</button>
+            <button class="float-btn" id="next-btn-float">⏭</button>
+        </div>
+    </div>
+
+    <script src="music-player.js"></script>
+</body>
+</html>
